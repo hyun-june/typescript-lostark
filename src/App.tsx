@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router";
-import "./App.css";
 import LoadingSpinner from "./common/components/LoadingSpinner";
+import "./App.css";
 
 const AppLayout = React.lazy(() => import("./layout/AppLayout"));
 const HomePage = React.lazy(() => import("./pages/Homepage/HomePage"));
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="char/:nickname" element={<SearchWithCharacter />} />
+          <Route path="char" element={<SearchWithCharacter />} />
         </Route>
       </Routes>
     </Suspense>

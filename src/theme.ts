@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { colors, createTheme } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -23,13 +23,13 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, Arial, sans-serif",
+    fontFamily: "NoonnuBasicGothicRegular",
     h1: {
       fontWeight: 700,
       fontSize: "24px",
     },
     h2: {
-      fontSize: "1rem",
+      fontSize: "1.5rem",
     },
     body1: {
       fontSize: "14px",
