@@ -42,7 +42,7 @@ const FirstClearRunTeam = {
     { name: "랜스", esther: true },
     { name: "인끼", esther: true },
     { name: "쭈르야", esther: true },
-    { name: "Dorist", esther: true },
+    { name: "Dorist" },
     { name: "리퍼는지켜줘야해" },
     { name: "강원기의원기옥" },
     { name: "코룰라", note: "카멘더헉" },
