@@ -3,7 +3,7 @@ import { Avatar, Box, Typography } from "@mui/material";
 import theme from "../../theme";
 import { CustomProfile } from "../../models/Character";
 import { Link } from "react-router-dom";
-
+import estherImg from "../../assets/img/esther.png";
 const CharInfoBox = styled(Box)({
   textAlign: "center",
 });
@@ -36,7 +36,7 @@ const CharProfileBox = ({ char }: { char: CustomProfile }) => {
               top: "0",
               right: "0",
             }}
-            src="/esther.png"
+            src={estherImg}
           />
         )}
       </Box>

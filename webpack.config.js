@@ -84,14 +84,6 @@ module.exports = (env, argv) => {
         allowEmptyValues: true,
         systemvars: true,
       }),
-      new CopyPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, "public"),
-            to: path.resolve(__dirname, "dist"),
-          },
-        ],
-      }),
     ],
   };
 };
