@@ -6,7 +6,8 @@ export const useGetCharactersList = (nicknames: string[]) => {
     queries: nicknames.map((name, index) => ({
       queryKey: ["character", name],
       queryFn: () => getCharacterProfile(name, index),
-      staleTime: 5 * 60 * 1000,
+      staleTime: 10 * 60 * 1000,
+      refetchOnWindowFocus: false,
     })),
   });
   const data = queries.map((query) => query.data);
