@@ -54,7 +54,7 @@ const FirstClearRunTeam = {
     { name: "다시", esther: true },
     { name: "율탱커", esther: true },
     { name: "풍산개" },
-    { name: "쭈니마로", esther: true },
+    { name: "쭈니마로" },
     { name: "좋냥" },
     { name: "풀씨", note: "카멘 The 3rd" },
   ],
