@@ -84,6 +84,7 @@ module.exports = (env, argv) => {
         allowEmptyValues: true,
         systemvars: true,
       }),
+      new CopyPlugin({ patterns: [{ from: "public", to: "" }] }),
     ],
   };
 };

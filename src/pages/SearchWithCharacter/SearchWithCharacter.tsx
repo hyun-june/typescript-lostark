@@ -14,7 +14,7 @@ const SearchWithCharacter = () => {
   // const { data: rosterData } = useGetRoster(keyword);
   const { data: profileData } = useGetCharactersProfiles(keyword);
   const { data: equipmentData } = useGetCharactersEquipment(keyword);
-  console.log("🚀 ~ SearchWithCharacter ~ equipmentData:", equipmentData);
+  // console.log("🚀 ~ SearchWithCharacter ~ equipmentData:", equipmentData);
 
   return (
     <div style={{ display: "flex", height: "100%" }}>

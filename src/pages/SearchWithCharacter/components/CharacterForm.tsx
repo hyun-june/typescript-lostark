@@ -20,8 +20,8 @@ const CharacterGrid = styled(Grid)({
 });
 
 const CharacterForm = ({ data, equipment }) => {
-  console.log("🚀 ~ CharacterForm ~ data:", data);
-  console.log("🚀 ~ CharacterForm ~ equipment:", equipment);
+  // console.log("🚀 ~ CharacterForm ~ data:", data);
+  // console.log("🚀 ~ CharacterForm ~ equipment:", equipment);
 
   return (
     <CharacterBox>
