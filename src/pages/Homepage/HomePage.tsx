@@ -3,7 +3,7 @@ import FirstClearRunCard from "../../common/components/FirstClearRunCard";
 import { useGetCharactersProfiles } from "../../hooks/useGetCharacter";
 import { useGetCharactersList } from "../../hooks/useGetCharactersList";
 import { useGetRoster } from "../../hooks/useGetRoster";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { CustomProfile } from "../../models/Character";
 import LoadingSpinner from "../../common/components/LoadingSpinner";
 
@@ -189,6 +189,7 @@ const HomePage = () => {
   const allMembers = Object.values(FirstClearRunTeam).flat();
   const allNicknames = allMembers.map((member) => member.name);
 
+  // const { data: characters, isLoading } = useGetCharactersList(allNicknames);
   const { data: characters, isLoading } = useGetCharactersList(allNicknames);
 
   if (isLoading || !characters) {
@@ -226,8 +227,11 @@ const HomePage = () => {
           key={teamName}
         />
       ))}
+
+      {/* <Button variant="contained" color="secondary" size="small">
+        더보기
+      </Button> */}
     </div>
   );
 };
-
 export default HomePage;

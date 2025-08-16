@@ -3,9 +3,9 @@ import { getCharacterProfile } from "../apis/charactersApi";
 
 export const useGetCharactersList = (nicknames: string[]) => {
   const queries = useQueries({
-    queries: nicknames.map((name) => ({
+    queries: nicknames.map((name, index) => ({
       queryKey: ["character", name],
-      queryFn: () => getCharacterProfile(name),
+      queryFn: () => getCharacterProfile(name, index),
       staleTime: 5 * 60 * 1000,
     })),
   });
