@@ -1,4 +1,5 @@
 import { Box, Grid, styled, Typography } from "@mui/material";
+import CharacterItemForm from "./CharacterItemForm";
 
 const CharacterBox = styled(Box)({
   display: "flex",
@@ -19,9 +20,15 @@ const CharacterGrid = styled(Grid)({
   gap: "1rem",
 });
 
-const CharacterForm = ({ data, equipment }) => {
+const CharacterForm = ({ ...props }) => {
+  const { data, equipment } = props;
   // console.log("🚀 ~ CharacterForm ~ data:", data);
-  // console.log("🚀 ~ CharacterForm ~ equipment:", equipment);
+
+  const tooltipData = equipment?.[0]?.Tooltip
+    ? JSON.parse(equipment?.[0]?.Tooltip)
+    : null;
+  // console.log("🚀 ~ CharacterForm ~ test:", tooltipData);
+  console.log("🚀 ~ CharacterForm ~ equipment:", equipment);
 
   return (
     <CharacterBox>
@@ -39,9 +46,14 @@ const CharacterForm = ({ data, equipment }) => {
           <img src={data?.CharacterImage} alt="" style={{ width: "200px" }} />
         </CharacterInfo>
         <CharacterEquipment>
-          <Box>
+          {/* <Box>
             <img src={equipment?.[0]?.Icon} alt="" />
-          </Box>
+          </Box> */}
+          <CharacterItemForm
+            icon={equipment?.[0].Icon}
+            name={equipment?.[0].Name}
+            tooltip={tooltipData}
+          />
         </CharacterEquipment>
       </CharacterGrid>
     </CharacterBox>

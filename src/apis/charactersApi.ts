@@ -2,6 +2,10 @@ import { instance, instance2 } from "./baseApi";
 
 const charatersUrl = "/armories/characters";
 
+//
+// /engravings = 각인서
+// /gems = 보석
+
 export const getCharacterProfile = async (nickname: string, index) => {
   const groupIndex = Math.floor(index / 80);
   const mainInstance = groupIndex % 2 === 0 ? instance : instance2;
